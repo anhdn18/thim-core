@@ -1,0 +1,9 @@
+remove cac file nay khi update thim_core version moi
+folder/assets/js
+
+
+core.js
+importer/importer.js
+plugins/plugins-manager.js
+getting-started/getting-started-v2.js
+feedback.js

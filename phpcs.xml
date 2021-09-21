@@ -1,0 +1,52 @@
+<?xml version="1.0"?>
+<ruleset name="Thim Core ruleset">
+    <description>Thim Core rules for PHP_CodeSniffer</description>
+
+    <arg name="extensions" value="php"/>
+
+    <!-- Run against the PHPCompatibility ruleset -->
+    <rule ref="PHPCompatibility">
+
+    </rule>
+
+    <rule ref="WordPress-Core">
+        <exclude name="Generic.WhiteSpace.DisallowSpaceIndent"/>
+
+        <exclude name="WordPress.WhiteSpace.PrecisionAlignment"/>
+
+        <exclude name="WordPress.WP.I18n.MissingTranslatorsComment"/>
+        <exclude name="WordPress.WP.I18n.MissingSingularPlaceholder" />
+        <exclude name="WordPress.WP.I18n.MismatchedPlaceholders" />
+        <exclude name="WordPress.WP.I18n.NonSingularStringLiteralPlural" />
+        <exclude name="WordPress.WP.I18n.NonSingularStringLiteralText" />
+
+        <exclude name="WordPress.Files.FileName.InvalidClassFileName"/>
+        <exclude name="WordPress.Files.FileName.NotHyphenatedLowercase"/>
+
+        <exclude name="WordPress.PHP.YodaConditions.NotYoda"/>
+
+        <exclude name="WordPress.Functions.DontExtract"/>
+
+        <exclude name="WordPress.NamingConventions.ValidFunctionName.FunctionNameInvalid" />
+        <exclude name="WordPress.NamingConventions.ValidFunctionName.MethodNameInvalid" />
+        <exclude name="WordPress.NamingConventions.ValidHookName.UseUnderscores" />
+        <exclude name="WordPress.NamingConventions.ValidVariableName.MemberNotSnakeCase" />
+        <exclude name="WordPress.NamingConventions.ValidVariableName.NotSnakeCase" />
+        <exclude name="WordPress.NamingConventions.ValidVariableName.NotSnakeCaseMemberVar" />
+        <exclude name="WordPress.NamingConventions.ValidVariableName.StringNotSnakeCase" />
+
+        <exclude name="WordPress.Arrays.ArrayDeclaration.NoComma" />
+        <exclude name="WordPress.Arrays.ArrayDeclaration.AssociativeKeyFound" />
+    </rule>
+
+    <file>./</file>
+
+    <exclude-pattern>*/vendor/*</exclude-pattern>
+    <exclude-pattern>*/tests/*</exclude-pattern>
+    <exclude-pattern>*/node_modules/*</exclude-pattern>
+    <exclude-pattern>*/inc/includes/*</exclude-pattern>
+    <exclude-pattern>*/admin/includes/*</exclude-pattern>
+    <exclude-pattern>*/admin/*</exclude-pattern>
+    <exclude-pattern>*/inc/*</exclude-pattern>
+    <exclude-pattern>*/for-themes/*</exclude-pattern>
+</ruleset>

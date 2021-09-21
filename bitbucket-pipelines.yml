@@ -1,0 +1,12 @@
+image: php:7.1.1
+pipelines:
+  default:
+    - step:
+        script:
+          - apt-get update && apt-get install git -y
+          - curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
+          - composer --version
+          - php -v
+          - ls -lah
+          - composer install
+          - ./vendor/bin/phpcs -d date.timezone=UTC

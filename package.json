@@ -1,0 +1,37 @@
+{
+  "name": "thim-core",
+  "version": "1.0.3",
+  "description": "# Note",
+  "main": "Thim Core Plugin.",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "test": "./vendor/bin/phpcs -d date.timezone=UTC",
+    "build": "gulp build",
+    "deploy": "gulp build && gulp deploy"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ThimPressWP/thim-core"
+  },
+  "author": "",
+  "license": "ISC",
+  "homepage": "https://github.com/ThimPressWP/thim-core",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^4.0.0",
+    "gulp-clean": "^0.3.2",
+    "gulp-copy": "0.0.2",
+    "gulp-livereload": "^3.8.1",
+    "gulp-sass": "^2.3.2",
+    "gulp-sourcemaps": "^1.6.0",
+    "gulp-zip": "^3.2.0"
+  },
+  "dependencies": {
+    "gh-pages": "^1.0.0",
+    "gulp-clean-css": "^3.9.0",
+    "gulp-gh-pages": "^0.5.4",
+    "gulp-shell": "^0.6.3"
+  }
+}
